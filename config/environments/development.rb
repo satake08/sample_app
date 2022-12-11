@@ -76,16 +76,16 @@ Rails.application.configure do
   config.hosts.clear
 end
 
-#アプリケーションのひな型作成→ターミナル内に「rails new アプリケーション名」でENT　アプリケーション名：sample_app
+#アプリケーションのひな型作成→ターミナル内に「rails new アプリケーション名」でENT アプリケーション名：sample_app
 #ホストを許可→config/environments/development.rb内一番下のendの上に「config.hosts.clear」と記述
-#モデルの作成→ターミナル内「rails g model モデル名」でENT　モデル名：List
-　#モデルのカラム作成→db/migrate/作成日時(数字の羅列)_create_lists.rb内に「title（タイトル）、body（本文）(どちらもカラム)」を
-　　#「t.データ型 :カラム名」の形式で「create_table :lists do |t|」の下に記述
-　#テーブルの作成→ターミナルで「rails db:migrate」を実行
-#コントローラーの作成(homesコントローラ)→ターミナル内で「rails g controller コントローラ名」実行　コントローラ名：homes
-　#アクションの追加→app/controllers/homes_controller.rb内に「def top end」を３行に分けて記述
-　#ルーティングを作成→config/routes.rb内に「HTTPメソッド 'URL' => 'コントローラ#アクション'」を記述
-　#ビューを作成→app/viewsの「homes」右クリ→「New File」クリックで作成→ファイル名の変更は「homes」右クリで「Rename」　ファイル名：top.html.erb
+#モデルの作成→ターミナル内「rails g model モデル名」でENT モデル名：List
+ #モデルのカラム作成→db/migrate/作成日時(数字の羅列)_create_lists.rb内に「title（タイトル）、body（本文）(どちらもカラム)」を
+  #「t.データ型 :カラム名」の形式で「create_table :lists do |t|」の下に記述
+ #テーブルの作成→ターミナルで「rails db:migrate」を実行
+#コントローラーの作成(homesコントローラ)→ターミナル内で「rails g controller コントローラ名」実行 コントローラ名：homes
+ #アクションの追加→app/controllers/homes_controller.rb内に「def top end」を３行に分けて記述
+ #ルーティングを作成→config/routes.rb内に「HTTPメソッド 'URL' => 'コントローラ#アクション'」を記述
+ #ビューを作成→app/viewsの「homes」右クリ→「New File」クリックで作成→ファイル名の変更は「homes」右クリで「Rename」 ファイル名：top.html.erb
 #＊ターミナルで「rails g controller homes top」実行でコントローラー作成からビュー作成までできる
-　#config/routes.rb内の「get 'homes/top'」を「get '/top' => 'homes#top'」に書き換える
+ #config/routes.rb内の「get 'homes/top'」を「get '/top' => 'homes#top'」に書き換える
 #Listsコントローラを作成→ターミナルで「rails g controller lists new index show edit」実行
